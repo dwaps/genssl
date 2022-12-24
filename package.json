@@ -1,6 +1,6 @@
 {
   "name": "gentls",
-  "version": "1.0.8",
+  "version": "2.0.0",
   "description": "Script to generate basic auto signed TLS certificat and public signature for a node server in dev mode",
   "main": "index.js",
   "bin": {
@@ -9,7 +9,13 @@
   "private": false,
   "type": "commonjs",
   "scripts": {
-    "start": "nodemon -r ./check-args . -w . -w ./check-args"
+    "dev:default": "NODE_DEBUG=gentls nodemon -r ./check-dev-filename . -w . -w ./check-args",
+    "dev:help": "NODE_DEBUG=gentls nodemon -r ./check-dev-filename . -w . -w ./check-args -- -h",
+    "dev:filename": "npm run dev:default -- yeah",
+    "dev:output": "npm run dev:default -- -o tests/coco.js",
+    "dev:rmdir:default": "npm run dev:default -- -r",
+    "dev:rmdir:output": "npm run dev:default -- -o tests/coco.js -r",
+    "dev:rmdir:filename:output": "npm run dev:default -- yeah -o tests/coco.js -r"
   },
   "contributors": [
     "Michael CORNILLON <ei.dwaps+gentls@gmail.com>"
@@ -83,10 +89,13 @@
   "engines": {
     "node": ">= 0.10.0"
   },
+  "nodemonConfig": {
+    "ignore": [
+      "./tests/**/*"
+    ],
+    "delay": 500
+  },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  },
-  "dependencies": {
-    "yargs": "^17.6.2"
   }
 }

@@ -5,4 +5,6 @@
  */
 
 'use strict';
-require('./bin/gentls');
+if (require('./src/help')) {
+  require('./bin/gentls');
+}
