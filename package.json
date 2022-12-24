@@ -1,19 +1,75 @@
 {
   "name": "gentls",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Script to generate basic auto signed TLS certificat and public signature for a node server in dev mode",
   "main": "index.js",
   "bin": {
-    "gentls": "./index.js"
+    "gentls": "./bin/gentls.js"
   },
+  "private": false,
+  "type": "commonjs",
   "scripts": {
-    "start": "nodemon . yeah"
+    "start": "nodemon -r ./check-args . -w . -w ./check-args"
   },
+  "contributors": [
+    "Michael CORNILLON <ei.dwaps+gentls@gmail.com>"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dwaps/gentls.git"
   },
-  "keywords": ["gentls", "tls", "generate tls", "generate ssl", "ssl", "generate", "generate certificate", "generate certificate ssl", "generate certificate tls", "create tls", "create ssl", "create certificate", "create certificate tls", "create certificate ssl", "openssl", "create private key", "generate private key", "generate key", "create key", "private key", "certificate", "certificate tls", "certificate ssl", "build ssl folder", "build tls folder", "localhost tls", "localhost ssl", "generer certificat tls", "generer certificat ssl", "créer certificat ssl", "créer certificat tls", "clé privée", "certificat tls", "certificat ssl"],
+  "keywords": [
+    "gentls",
+    "tls",
+    "generate tls",
+    "generate ssl",
+    "ssl",
+    "generate",
+    "generate certificate",
+    "generate certificate ssl",
+    "generate certificate tls",
+    "create tls",
+    "create ssl",
+    "create certificate",
+    "create certificate tls",
+    "create certificate ssl",
+    "openssl",
+    "create private key",
+    "generate private key",
+    "generate key",
+    "create key",
+    "private key",
+    "certificate",
+    "certificate tls",
+    "certificate ssl",
+    "build ssl folder",
+    "build tls folder",
+    "localhost tls",
+    "localhost ssl",
+    "generer certificat tls",
+    "generer certificat ssl",
+    "créer certificat ssl",
+    "créer certificat tls",
+    "clé privée",
+    "certificat tls",
+    "certificat ssl",
+    "https",
+    "michael",
+    "cornillon",
+    "michael cornillon",
+    "cornillon michael",
+    "dwaps",
+    "ei dwaps",
+    "dwaps formation",
+    "cli",
+    "outil en ligne de commande",
+    "command line tool",
+    "command line tool to generate tls certificate",
+    "command line tool to generate tls",
+    "web",
+    "cli for web",
+    "cli for app web"
+  ],
   "author": {
     "name": "Michael Cornillon",
     "email": "ei.dwaps@gmail.fr",
@@ -24,7 +80,13 @@
     "url": "https://github.com/dwaps/gentls/issues"
   },
   "homepage": "https://github.com/dwaps/gentls#readme",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
   "devDependencies": {
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "yargs": "^17.6.2"
   }
 }

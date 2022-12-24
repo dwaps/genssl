@@ -1,0 +1,5 @@
+const filename = process.argv[2];
+
+if (!filename) {
+  process.env.GENTLS_FILENAME = 'default';
+}
