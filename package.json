@@ -4,7 +4,7 @@
   "description": "Script to generate basic auto signed TLS certificat and public signature for a node server in dev mode",
   "main": "index.js",
   "bin": {
-    "gentls": "./bin/gentls.js"
+    "gentls": "./index.js"
   },
   "private": false,
   "type": "commonjs",
