@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /*!
  * gentls
  * Copyright(c) 2022 CORNILLON Michael (dwaps)
